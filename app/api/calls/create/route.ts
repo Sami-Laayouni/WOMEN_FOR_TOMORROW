@@ -39,7 +39,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ 
       call_id: callResponse.call_id,
       access_token: callResponse.access_token,
-      sample_rate: callResponse.sample_rate || 24000,
     });
   } catch (error: any) {
     console.error('Error creating call:', error);
